@@ -79,3 +79,43 @@ class PrimaryButtonBorder extends StatelessWidget {
     );
   }
 }
+
+class CardBottom extends StatelessWidget {
+  final String text;
+  final VoidCallback onPressed;
+
+  const CardBottom({
+    Key? key,
+    required this.text,
+    required this.onPressed,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: double.infinity,
+      height: 20,
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          backgroundColor: AppColors.secondaryColor,
+          elevation: 0,
+          shape: const RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(
+              Radius.circular(50),
+            ),
+            // side: BorderSide(color: AppColors.primaryColor, width: 2),
+          ),
+          
+        ),
+        onPressed: onPressed,
+        child: Text(
+          text,
+          style: const TextStyle(
+            fontSize: 10,
+            color: Colors.white,
+          ),
+        ),
+      ),
+    );
+  }
+}
