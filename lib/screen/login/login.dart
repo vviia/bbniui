@@ -59,7 +59,7 @@ class LoginPage extends StatelessWidget {
               child: const TextField(
                 decoration: InputDecoration(
                     border: InputBorder.none,
-                    hintText: 'Masukan Username',
+                    hintText: 'Masukan Username',  
                     hintStyle: TextStyle(color: AppColors.secondaryColor, fontSize: 12 )),
               ),
             ),
